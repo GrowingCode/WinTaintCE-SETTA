@@ -1,0 +1,27 @@
+C:/HomeSpace/BinaryAnalysis/DynamoRIO-Windows-9.93.19503/bin64/drrun.exe -c C:/HomeSpace/CTaintAnalysis/yyx_taint/build/Release/yyx_taint.dll -- C:/Users/yangy/source/repos/TestReadFile/x64/Debug/TestReadFile.exe C:/HomeSpace/BinaryFuzzInput/5bytes.bin
+C:/HomeSpace/BinaryAnalysis/DynamoRIO-Windows-9.93.19503/bin64/drrun.exe -c C:/HomeSpace/CTaintAnalysis/yyx_taint/build/Release/yyx_taint.dll -- C:/Users/yangy/source/repos/TestReadFile/x64/Release/TestReadFile.exe C:/HomeSpace/BinaryFuzzInput/5bytes.bin
+C:/HomeSpace/BinaryAnalysis/DynamoRIO-Windows-9.93.19503/bin64/drrun.exe -c C:/HomeSpace/CTaintAnalysis/yyx_taint/build/Release/yyx_taint.dll -debug -- C:/Users/yangy/source/repos/TestReadFile/x64/Release/TestReadFile.exe C:/HomeSpace/BinaryFuzzInput/5bytes.bin
+C:/HomeSpace/BinaryAnalysis/DynamoRIO-Windows-9.93.19503/bin64/drrun.exe -c C:/HomeSpace/CTaintAnalysis/yyx_taint/build/Release/yyx_taint.dll -do_instrument 0 -- C:/Users/yangy/source/repos/TestReadFile/x64/Release/TestReadFile.exe C:/HomeSpace/BinaryFuzzInput/5bytes.bin
+C:/HomeSpace/BinaryAnalysis/DynamoRIO-Windows-9.0.1/bin64/drrun.exe -c C:/HomeSpace/CTaintAnalysis/yyx_taint/build/Release/yyx_taint.dll -- C:/Users/yangy/source/repos/TestReadFile/x64/Release/TestReadFile.exe C:/HomeSpace/BinaryFuzzInput/5bytes.bin
+
+C:/HomeSpace/BinaryAnalysis/DrMemory-Windows-2.5.0/bin64/drstrace.exe -- C:/Users/yangy/source/repos/TestReadFile/x64/Debug/TestReadFile.exe C:/HomeSpace/BinaryFuzzInput/5bytes.bin
+C:/HomeSpace/BinaryAnalysis/DrMemory-Windows-2.5.0/bin64/drstrace.exe -- C:/Users/yangy/source/repos/TestReadFile/x64/Release/TestReadFile.exe C:/HomeSpace/BinaryFuzzInput/5bytes.bin
+C:/HomeSpace/BinaryAnalysis/DynamoRIO-Windows-9.93.19503/drmemory/bin64/drstrace.exe -- C:/Users/yangy/source/repos/TestReadFile/x64/Release/TestReadFile.exe C:/HomeSpace/BinaryFuzzInput/5bytes.bin
+
+C:/HomeSpace/BinaryAnalysis/DynamoRIO-Windows-9.93.19503/bin64/drrun.exe -t drcachesim -indir drmemtrace.TestReadFile.exe.11044.9457.dir/
+
+
+
+// dynamoRIO origin dll experiment
+// memtrace_x86_text
+C:/HomeSpace/BinaryAnalysis/DynamoRIO-Windows-9.93.19503/bin64/drrun.exe -c C:/HomeSpace/BinaryAnalysis/DynamoRIO-Windows-9.93.19503/samples/bin64/memtrace_x86_text.dll -- C:/Users/yangy/source/repos/TestReadFile/x64/Release/TestReadFile.exe C:/HomeSpace/BinaryFuzzInput/5bytes.bin
+// memval_simple
+C:/HomeSpace/BinaryAnalysis/DynamoRIO-Windows-9.93.19503/bin64/drrun.exe -c C:/HomeSpace/BinaryAnalysis/DynamoRIO-Windows-9.93.19503/samples/bin64/memval_simple.dll -- C:/Users/yangy/source/repos/TestReadFile/x64/Release/TestReadFile.exe C:/HomeSpace/BinaryFuzzInput/5bytes.bin
+
+
+C:/HomeSpace/BinaryAnalysis/DynamoRIO-Windows-9.93.19503/bin64/drrun.exe -c C:/HomeSpace/CTaintAnalysis/yyx_taint/build/Release/yyx_taint.dll -- C:/HomeSpace/BinaryFuzzBench/winlibs/test_jpeg/build/Release/test_jpeg.exe C:/HomeSpace/BinaryFuzzBench/winlibs/test_jpeg/input.jpg
+
+
+
+
+

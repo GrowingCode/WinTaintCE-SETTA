@@ -1,0 +1,10 @@
+mkdir build && cd build
+cmake .. -A Win32 // force to build 32bit exe on 64bit machine
+cmake .. -DVCKPG_PATH="C:/HomeSpace/GitLibrary/vcpkg"
+linux: make -j4
+win10: cmake --build . --config Release
+win10: cmake --build . // default is Debug mode
+win10-mingw: mingw32-make -j4
+
+
+

@@ -1,0 +1,9 @@
+before push, you should run the following:
+git add .
+git commit -m "small change."
+git push
+
+before you write any new code, you should pull code at first, you should use:
+git pull
+
+over.
