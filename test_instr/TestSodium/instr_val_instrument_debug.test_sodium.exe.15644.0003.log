@@ -1,0 +1,49 @@
+== print op and appear cound begin ==
+opcode:4,opname:add,appear_count:9.
+opcode:5,opname:or,appear_count:4.
+opcode:7,opname:sbb,appear_count:1.
+opcode:8,opname:and,appear_count:11.
+opcode:10,opname:sub,appear_count:5.
+opcode:12,opname:xor,appear_count:20.
+opcode:14,opname:cmp,appear_count:17.
+opcode:16,opname:inc,appear_count:4.
+opcode:18,opname:push,appear_count:13.
+opcode:20,opname:pop,appear_count:12.
+opcode:28,opname:jb,appear_count:2.
+opcode:29,opname:jnb,appear_count:1.
+opcode:30,opname:jz,appear_count:12.
+opcode:31,opname:jnz,appear_count:17.
+opcode:32,opname:jbe,appear_count:1.
+opcode:42,opname:call,appear_count:8.
+opcode:46,opname:jmp,appear_count:4.
+opcode:47,opname:jmp,appear_count:4.
+opcode:55,opname:mov,appear_count:68.
+opcode:56,opname:mov,appear_count:15.
+opcode:57,opname:mov,appear_count:10.
+opcode:60,opname:test,appear_count:32.
+opcode:61,opname:lea,appear_count:8.
+opcode:70,opname:ret,appear_count:6.
+opcode:95,opname:syscall,appear_count:2.
+opcode:105,opname:rdtsc,appear_count:1.
+opcode:114,opname:cmovz,appear_count:1.
+opcode:115,opname:cmovnz,appear_count:1.
+opcode:154,opname:jb,appear_count:2.
+opcode:156,opname:jz,appear_count:6.
+opcode:157,opname:jnz,appear_count:9.
+opcode:158,opname:jbe,appear_count:1.
+opcode:173,opname:setnz,appear_count:2.
+opcode:185,opname:bt,appear_count:1.
+opcode:188,opname:bts,appear_count:1.
+opcode:190,opname:cmpxchg,appear_count:4.
+opcode:192,opname:btr,appear_count:1.
+opcode:195,opname:movzx,appear_count:3.
+opcode:257,opname:shl,appear_count:1.
+opcode:258,opname:shr,appear_count:1.
+opcode:261,opname:neg,appear_count:1.
+opcode:263,opname:div,appear_count:2.
+opcode:382,opname:pause,appear_count:4.
+== print op and appear cound end ==
+== print iencodes_storage summary begin ==
+= t_data->iencodes_storage size:1,1.
+iencodes_storage occupy_size:5.
+== print iencodes_storage summary end ==
