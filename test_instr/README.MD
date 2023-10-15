@@ -1,1 +1,8 @@
+## Tool Usage
+
+At first, the CommonRunTutorialAndCompiledTool contains the compiled version of the tool. 
+
 Firstly, extract the code from the winlib library, generate a solution, use the generated executable file as a test case, use the example from the winlib library as the initial seed for the experiment, use the Winafl testing tool to generate a queue, and use its output as the seed for the stain treatment in this article. Inject the contaminated load into the binary, and the execution engine tracks its propagation in memory, Then input the generated trace into the WinTaintCE symbol execution program, generate a new seed, and use it as input to Winafl.
+
+
+
