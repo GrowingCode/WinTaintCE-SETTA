@@ -6,12 +6,6 @@ Follow the instruction in that directory to run tool for the simplest case.
 
 If the simplest case is successfully start up, replace the to-be-test exe with the exe in Test-Prefix directory. 
 
-Note that, we discover that the pandel of WinAFL often shows that it find 5 paths by running a single seed for 5-10 rounds without any mutation, so to make the comparison fair, after generating seeds by WinTaintCE, we also let WinAFL take the generated seeds by WinTaintCE as the initial seeds and run for 15 minutes. The running time of WinTaintCE subtracts 15 minutes accordingly. 
-
-We also provide tutorial about how to run WinAFL. 
-
-In summary, we use WinAFL's statistical results to evaluate the number of discovered paths. 
-
 # Usage Warning
 The machine under test is bought 3 years ago, and AVX instruction set (max 256 bit) is supported, the AVX512 instruction set (max 512 bit) is supported but not tested. 
 If your machine is bought in recent 1 or 2 years, it may support AVX512 and I will throw exception if AVX512 instructions are encountered as they are not tested on my machine. 
@@ -21,7 +15,8 @@ If your machine is bought in recent 1 or 2 years, it may support AVX512 and I wi
 
 2.	Download the executable file of the Winlib library on our open-source WinTaintCE GitHub.
 
-3.	Randomly select 5-10 seed files from the initial-seeds_alternative-pool we provide as input to WinTaintCE, and they should be put into an empty directory, here is "C:/HomeSpace/BinaryFuzzInput" in this tutorial.
+3.  In this version, we only offer functionality to generate test cases for one initial seed. To loop the procedure, please write a script by your own. 
+3.1	Randomly select one seed file as input to WinTaintCE, and they should be put into an empty directory, here is "C:/HomeSpace/BinaryFuzzInput" in this tutorial.
 
     The following line is the command line:
 
@@ -36,40 +31,6 @@ If your machine is bought in recent 1 or 2 years, it may support AVX512 and I wi
     We print the origin non-taint trace in this time to let reviewers see origin trace length. 
     The taint analysis is shown offline to let reviewers see the taint details.
 
-
-# Use of WinAFL
-
-1.	Download DynamoRio（https://dynamorio.org/page_releases.html）
-2.  Download WinAFL（https://github.com/googleprojectzero/winafl）
-3.  Randomly select 5-10 seed files from the initial-seeds_alternative-pool we provide as initial seeds of WinAFL. 
-4.  Enter the command prompt tool (cmd) in the directory of WinAFL and use the following command:
-    mkdir build64
-    cd build64
-    cmake -A x64 .. -DDynamoRIO_DIR=..\path\to\DynamoRIO\cmake
-    cmake --build . --config Release
-5.  Create new folders “in” and “out” in the ..\winafl\build64\bin\Release
-6.  Place the seed file 5bytes.bin in the folder ”in”
-7.  Place the executable file libfile-simple.exe in the folder “Release”
-8.  afl-fuzz testing use the following command：
-    afl-fuzz.exe -i in -o out -D DynamoRIO_path\bin64 -t 20000 -- -coverage_module test_sodium.exe -fuzz_iterations 5000 -target_module test_sodium.exe -target_method main -nargs 2 -- test_sodium.exe @@
-
-NOTE:
-    afl-fuzz [afl options] -- [instrumentation options] -- target_cmd_line
-
-    [afl options] Insertion parameters
-    -i dir		——Directory for samples
-    -o dir		——Save output data
-    -D dir		——Path to DynamoRIO
-    -t msec		——The timeout time for each sample execution
-    
-    [instrumentation options] Target program parameters
-    -coverage_module 	——Module for calculating coverage 
-    -fuzz_iterations		——Maximum number of iterations
-    -target_module		——Target program, containing the objective function to be fuzzified
-    -target_method		——Objective function name
-    -nargs          		——The number of parameters required for the execution of the target program (including the target program itself)
-    
-    @@					——Reference test cases in the - i parameter
 
 
 
